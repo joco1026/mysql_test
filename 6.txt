@@ -1,0 +1,23 @@
+###not taking physics
+select concat(first_name, ' ', last_name)
+from student s
+where not exists (
+  select 1
+  from registration r
+  where class_id = 3
+  and r.student_id = s.id)
+
+###most classes
+select concat(first_name, ' ', last_name), count(class_id)
+from student s
+left join registration r on s.id = r.student_id
+group by concat(first_name, ' ', last_name)
+order by count(class_id) desc
+
+###no classes
+select concat(first_name, ' ', last_name)
+from student s
+left join registration r on s.id = r.student_id
+group by concat(first_name, ' ', last_name)
+having count(class_id) = 0
+order by last_name asc;

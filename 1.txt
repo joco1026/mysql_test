@@ -1,0 +1,7 @@
+What is ER model?
+
+An Entity Relationship diagram graphically maps entities and their relationships to each other. An entity is an object (ie: person, place, thing, concept, etc) about which data can be collected. A relationship is how data is shared between the entities.
+
+For example: a BOOK is written by an AUTHOR
+
+A book may have more than one author. An author may have written more than one book. This is called a many-to-many relationship.

@@ -1,0 +1,1 @@
+yes a database can have a table that does not link to other tables. One reason might be the table could contain content to be displayed through an application.
